@@ -1,1 +1,8 @@
-<paste log output from Kubernetes-mediated prediction, here>
+~/De/D/project-ml-microservice-kubernetes  on   master ?1  ./run_kubernetes.sh                                                      INT ✘  at 16:20:33  
+pod/ml-api-app created
+pod/ml-api-app condition met
+NAME         READY   STATUS    RESTARTS   AGE
+ml-api-app   1/1     Running   0          1s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
