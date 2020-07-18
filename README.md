@@ -24,23 +24,26 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Files structure
 
-```md
+```sh
 .
+├── .circleci
+│   └── config.yml #Contains the configurations needed for the pipeline on circleci
 ├── Dockerfile
-├── Makefile
+├── Makefile # Includes instructions on environment setup and lint tests
 ├── README.md
-├── app.py
-├── make_prediction.sh
+├── app.py # Is the python flask app
+├── make_prediction.sh # Makes prediction for housing prices
 ├── model_data
 │   ├── boston_housing_prediction.joblib
 │   └── housing.csv
 ├── output_txt_files
 │   ├── docker_out.txt
 │   └── kubernetes_out.txt
-├── requirements.txt
-├── run_docker.sh
-├── run_kubernetes.sh
-└── upload_docker.sh
+├── requirements.txt #  Contains all the dependencies
+├── run_docker.sh # Builds the docker image and run it on the specified port
+├── run_kubernetes.sh # Runs the flask app via kubernetes
+└── upload_docker.sh # Uploads the docker image to the specify docker repository
+
 ```
 
 ---
@@ -53,13 +56,16 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
-    You will now access the app on localhost port 80. http://localhost:80/
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Make predictions: `./make_predictio.sh`
+5. Upload docker image: `upload_docker.sh`
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
+* Setup and Configure Docker locally `https://docs.docker.com/desktop/`
+* Setup and Configure Kubernetes locally `https://kubernetes.io/docs/tasks/tools/install-kubectl/`
+* Setup and Configure Minikube locally `https://kubernetes.io/docs/tasks/tools/install-minikube/`
+* Run `minikube start` to create a cluster
+* Run `kubectl config view` to check if the cluster is running
 * Run via kubectl
