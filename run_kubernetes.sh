@@ -23,4 +23,4 @@ kubectl get pods
 kubectl port-forward ml-api-app 8000:80
 
 # See the output of app running into pods
-kubectl logs project-microservices-udacity  
+kubectl logs ml-api-app
