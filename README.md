@@ -57,9 +57,15 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-4. Make predictions: `./make_predictio.sh`
-5. Upload docker image: `upload_docker.sh`
+3. Upload docker image: `upload_docker.sh`
+4. Run in Kubernetes:  `./run_kubernetes.sh`
+5. Make predictions: `./make_predictio.sh`
+6. On a diferent terminal run the command as below.
+
+    ```bash
+    # See the output of app running into pods
+    kubectl logs ml-api-app
+    ```
 
 ### Kubernetes Steps
 
